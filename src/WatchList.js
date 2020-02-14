@@ -32,13 +32,13 @@ function WatchList() {
   return (
     <div className="page-watch-list wrapper">
            
-            {watchList === null  ?
+            {(watchList === '[]' || watchList === '' || watchList === null ) ?
                 <div>
                    <Animated animationIn="fadeInUp" animationOut="fadeOutDown" animationInDuration={1500} animationOutDuration={2500} isVisible={true}>
                     <h1 className="error">Oops! </h1>
                     </Animated>
                   <h1>Looks like your list is empty. </h1>
-                  <p>Add movies to your Watch List by clicking the '+' button on any movie page.</p>
+                  <p>Add movies to your Watch List by clicking the '&#128140;' button on any movie page.</p>
                 </div>
               :
               
@@ -48,7 +48,7 @@ function WatchList() {
                 </Animated>
                 <Animated animationIn="fadeInUp" animationOut="fadeOutDown" animationInDuration={1500} animationOutDuration={2500} isVisible={true}>
                   <p>
-                    <button onClick={clearStorage} className="purple-btn">Clear All</button>
+                    <button onClick={clearStorage} className="purple-btn">Clear All &#128075;</button>
                   </p>
                     {watchList.map(laterMovie => (
                       <div className="laterMovie">

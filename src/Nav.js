@@ -6,7 +6,7 @@ function Nav() {
   let watchList = JSON.parse(localStorage.getItem("watchList"));
   console.log(watchList);
 
-
+  
 
   return (
     <nav>

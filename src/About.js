@@ -8,10 +8,10 @@ function About() {
     <div className="page-about wrapper">
            <div className="poster-box">
               <div className="poster-small">
-               <img src="/assets/maytheforce.svg" width="320" alt="may the force"/>
+               <img src="/assets/movienight.svg" width="320" alt="movie night"/>
               </div>
               <div className="poster-large">
-                <img src="/assets/maytheforce.svg" width="600" alt="may the force"/>
+                <img src="/assets/movienight.svg" width="600" alt="movie night"/>
               </div>
            </div>
            <div className="details-box">

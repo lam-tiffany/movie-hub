@@ -156,7 +156,7 @@ function MovieDetails(props) {
                 </Animated>
                 <Animated animationIn="fadeInUp" animationOut="fadeOutDown" animationInDuration={1500} animationOutDuration={1500} isVisible={true}>
                     
-                    {fav === true ? <button onClick= {removeToStorage} className="purple-btn">Remove from Watch List</button> : <button onClick={addToStorage} className="purple-btn">Add to Watch List +</button>}
+                    {fav === true ? <button onClick= {removeToStorage} className="purple-btn">Remove from Watch List &#128075;</button> : <button onClick={addToStorage} className="purple-btn">&#128140; Add to Watch List</button>}
 
                     <div className="details-box">
                         <h1>{movie.title}</h1>
