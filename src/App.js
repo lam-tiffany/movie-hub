@@ -1,25 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Nav from './Nav';
+import SearchPage from './SearchPage';
+import Trending from './Trending';
+import TopRated from './TopRated';
+import About from './About';
+import WatchList from './WatchList';
+import Footer from './Footer';
+import MovieDetails from './MovieDetails';
+import NotFound from './NotFound';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Nav />
+            <Switch>
+              <Route path="/" exact component={SearchPage}/>
+              <Route path="/trending" component={Trending}/>
+              <Route path="/toprated" component={TopRated}/>
+              <Route path="/about" component={About}/>
+              <Route path="/watchlist" component={WatchList}/>
+              <Route path="/movies/:id" component={MovieDetails}/>
+              <Route path="*" component={NotFound}/>
+            </Switch>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
