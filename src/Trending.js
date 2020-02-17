@@ -69,17 +69,16 @@ function Trending() {
                                             <div className="available-poster">
                                                 <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} width="300" alt={`${movie.title} movie poster`}/> 
                                             </div>
-
                                     }  
                                     </Link>
                                 </div>
                                     <div className="flip-card-back popular-movie-info">
                                     <Link to={`/movies/${movie.id}`} className="linkEffects">
-                                    <p>
-                                        <span>{movie.title}</span>
-                                        <p>Rating: {movie.vote_average}/10</p>
-                                        <p>{(movie.overview).substr(0, 150)}...</p>
-                                    </p>
+                                        <p>
+                                            <span>{movie.title}</span>
+                                            <p>Rating: {movie.vote_average}/10</p>
+                                            <p>{(movie.overview).substr(0, 150)}...</p>
+                                        </p>
                                     </Link>
                                 </div>
                             </div>
@@ -88,10 +87,9 @@ function Trending() {
                     <span className="movie-gap"></span>
                 </div>
                 </Link>   
-        ))} 
-        </div>
+            ))} 
+            </div>
         </Animated>
-
     </div>
   );
 }

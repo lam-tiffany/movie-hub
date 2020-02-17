@@ -32,9 +32,8 @@ function MovieDetails(props) {
         }
       }
     
-    // Fetch data of current movie & then change states accordingly
-    // - Movie, Actors, Loading change to false, whether this movie is stored in localStorage 
-
+    // Fetch data of current movie
+    // Then change states accordingly -> Movie, Actors, Loading change to false, whether this movie is stored in localStorage 
     useEffect(() => {
 
         const fetchMovie = async () => {
@@ -93,16 +92,15 @@ function MovieDetails(props) {
             existEntries.push({movie});
             localStorage.setItem("watchList", JSON.stringify(existEntries));
             window.location.reload();
-        }
-
-
+    }
+    
     const removeToStorage = () => {
         let updateEntries = JSON.parse(localStorage.getItem("watchList"));
         if(updateEntries != null)
             updateEntries.splice(favIndex, 1); 
             localStorage.setItem("watchList", JSON.stringify(updateEntries));
             window.location.reload();
-      }
+    }
 
   return (
    <div className="page-movie wrapper">

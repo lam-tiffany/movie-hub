@@ -69,7 +69,6 @@ function TopRated() {
                                             <div className="available-poster">
                                                 <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} width="300" alt={`${movie.title} movie poster`}/> 
                                             </div>
-
                                     }  
                                     </Link>
                                 </div>
@@ -79,7 +78,6 @@ function TopRated() {
                                         <span>{movie.title}</span>
                                         <p>Rating: {movie.vote_average}/10</p>
                                         <p>{(movie.overview).substr(0, 150)}...</p>
-                                        
                                     </p>
                                     </Link>
                                 </div>
@@ -90,7 +88,6 @@ function TopRated() {
                 </div>
                  </Link>   
         ))}
-           
         </div>
         </Animated>
     </div>

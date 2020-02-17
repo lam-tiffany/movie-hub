@@ -44,11 +44,6 @@ nav {
   
 }
 
-
-
-
-
-
 /* Typography */
 
 a {
@@ -174,7 +169,7 @@ nav svg {
   margin-top: 150px;
 }
 
-/* Tablet view media query */
+/* Tablet layout media query */
 @media only screen and (min-width: 650px) {
   .popular-movies {
     display: grid;
@@ -198,7 +193,7 @@ nav svg {
   
 }
 
-/* Desktop view media query */
+/* Desktop layout media query */
 @media only screen and (min-width: 900px) {
   .popular-movies {
     display: grid;
@@ -335,6 +330,7 @@ nav svg {
   perspective: 1000px;
   transform: translateX(-40%);
 }
+
 .flip-card {
   position: relative;
   width: 100%;
@@ -343,6 +339,7 @@ nav svg {
   transition: transform 1s;
   transform-style: preserve-3d;
 }
+
 .flip-card-container:hover .flip-card {
   transform: rotateY(.5turn)
 }
@@ -358,10 +355,12 @@ nav svg {
   justify-content: center;
   align-items: center;
 }
+
 .flip-card-front {
   background-color: #85706b;
   color: #fff;
 }
+
 .flip-card-back {
   background-color: #85706b;
   color: #fff;
@@ -421,7 +420,6 @@ nav svg {
   font-size: 1.3em;
   z-index: 1 !important;
 }
-
 
 /* Loading Styles */
 

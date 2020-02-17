@@ -28,7 +28,6 @@ class MovieRow extends React.Component {
                                                 <div className="available-poster">
                                                     <img src={this.props.movie.poster_src} width="250" alt={`${this.props.movie.title} movie poster`}/>
                                                 </div>
-
                                         }
                                     </Link>
                                 </div>

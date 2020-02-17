@@ -40,7 +40,6 @@ function About() {
                   and remove any item anytime.</p>
               </Animated>
             </div>
-            
     </div>
     <div className="sub-footer">
       <p><strong>disclaimer.</strong> This product uses the TMDb API but is not endorsed or certified by TMDb.</p>
