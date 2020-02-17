@@ -40,8 +40,7 @@ nav {
 .nav-link:hover,
 .nav-link:focus,
 .nav-link:active{
-  color: #d58e81;
-  
+  color: #d58e81; 
 }
 
 /* Typography */
@@ -163,9 +162,13 @@ nav svg {
 
 .page-watch-list {
   margin-top: 0;
+  display: inline-block;
+  text-align: center;
 }
 
-.page-watch-list .error {
+.loading, .page-404, .page-watch-list .error{
+  display: inline-block;
+  text-align: center;
   margin-top: 150px;
 }
 
@@ -422,13 +425,6 @@ nav svg {
 }
 
 /* Loading Styles */
-
-.loading, .page-404, .page-watch-list {
-  display: inline-block;
-  text-align: center;
-  margin-top: 150px;
-}
-
 .loading h1 {
   font-weight: 300;
 }
