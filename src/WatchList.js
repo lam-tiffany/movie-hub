@@ -1,11 +1,13 @@
+// React Imports
 import React from 'react';
 import { Link } from 'react-router-dom';
+
+// Library Imports
 import {Animated} from "react-animated-css";
 
 function WatchList() {
 
   let watchList = JSON.parse(localStorage.getItem("watchList"));
-  console.log(watchList);
 
   const clearStorage = () => {
     if(window.confirm('All your saved movie(s) will be removed. Are you sure?')){
@@ -13,21 +15,6 @@ function WatchList() {
     window.location.reload();
     }
   }
-
-
-  
-//   const removeHandler = (e) => {
-// e.preventDefault();
-//   //  const laterMovie = watchList.map(laterMovie => (laterMovie));
-//   //  console.log(laterMovie);
-//     let movieIndex = watchList.indexOf(laterMovie);
-//     console.log(movieIndex);
-//     if(movieIndex == -1){
-//       watchList.splice(movieIndex, 1);
-//     }
-//   }
-
-
 
   return (
     <div className="page-watch-list wrapper">
@@ -41,7 +28,6 @@ function WatchList() {
                   <p>Add movies to your Watch List by clicking the '&#128140;' button on any movie page.</p>
                 </div>
               :
-              
               <span>
                  <Animated animationIn="fadeInUp" animationOut="fadeOutDown" animationInDuration={1500} animationOutDuration={2500} isVisible={true}>
                     <h1>My Watch List</h1>
@@ -64,7 +50,6 @@ function WatchList() {
                  </Animated>
               </span> 
             }
-            
     </div>
   );
 }

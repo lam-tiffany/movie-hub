@@ -1,5 +1,8 @@
+// React Imports
 import React from 'react';
 import {Link} from 'react-router-dom';
+
+// Library Imports
 import {Animated} from "react-animated-css";
 
 function About() {

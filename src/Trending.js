@@ -1,6 +1,8 @@
+// React Imports
 import React, {useState, useEffect} from 'react';
-import './App.css';
 import { Link } from 'react-router-dom';
+
+// Library Imports
 import {Animated} from "react-animated-css";
 
 // API Key:
@@ -26,6 +28,8 @@ function Trending() {
         setLoading(false);
     }
 
+    // Render below on page load (see above - loading state is true by default) 
+    // until data is fetched successfully
     if (loading) return (
         <div id="popular" className="wrapper">
             <main className="loading">
@@ -40,22 +44,22 @@ function Trending() {
             <h1>Trending</h1>
         </Animated>
         <Animated animationIn="fadeIn" animationOut="fadeOutDown" animationInDuration={2500} animationOutDuration={2500} isVisible={true}>
-        <div className="popular-movies">
-        {movies.map(movie => (
-              <Link to={`/movies/${movie.id}`} className="linkEffects"> 
-                <div className="popular-movie">
-                    <div className="popular-movie-title">
-                        <h2 key={movie.id}>
-                        <Link to={`/movies/${movie.id}`} className="linkEffects">
-                            {movie.title}
-                        </Link>
-                        </h2>
-                    </div>
-                    <div className="card-adjustment">
-                        <div className="flip-card-container">
-                            <div className="flip-card">
-                                <div className="flip-card-front popular-movie-poster">
-                                    <Link to={`/movies/${movie.id}`} className="linkEffects">
+            <div className="popular-movies">
+                {movies.map(movie => (
+                    <Link to={`/movies/${movie.id}`} className="linkEffects"> 
+                    <div className="popular-movie">
+                        <div className="popular-movie-title">
+                            <h2 key={movie.id}>
+                                <Link to={`/movies/${movie.id}`} className="linkEffects">
+                                {movie.title}
+                                </Link>
+                            </h2>
+                        </div>
+                        <div className="card-adjustment">
+                            <div className="flip-card-container">
+                                <div className="flip-card">
+                                    <div className="flip-card-front popular-movie-poster">
+                                     <Link to={`/movies/${movie.id}`} className="linkEffects">
                                     {
                                         movie.poster_path == null ? 
                                             <div className="unavailable-poster">
@@ -67,16 +71,14 @@ function Trending() {
                                             </div>
 
                                     }  
-                                        {/* <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} width="300" alt={`${movie.title} movie poster`}/> */}
                                     </Link>
                                 </div>
-                                <div className="flip-card-back popular-movie-info">
+                                    <div className="flip-card-back popular-movie-info">
                                     <Link to={`/movies/${movie.id}`} className="linkEffects">
                                     <p>
                                         <span>{movie.title}</span>
                                         <p>Rating: {movie.vote_average}/10</p>
                                         <p>{(movie.overview).substr(0, 150)}...</p>
-                                        
                                     </p>
                                     </Link>
                                 </div>
@@ -86,8 +88,7 @@ function Trending() {
                     <span className="movie-gap"></span>
                 </div>
                 </Link>   
-        ))}
-           
+        ))} 
         </div>
         </Animated>
 

@@ -1,5 +1,11 @@
+// React Imports
 import React from 'react';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+
+// Style Imports
 import './App.css';
+
+// Component Imports
 import Nav from './Nav';
 import SearchPage from './SearchPage';
 import Trending from './Trending';
@@ -9,7 +15,7 @@ import WatchList from './WatchList';
 import Footer from './Footer';
 import MovieDetails from './MovieDetails';
 import NotFound from './NotFound';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+
 
 function App() {
   return (

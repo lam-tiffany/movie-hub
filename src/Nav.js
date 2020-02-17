@@ -1,13 +1,8 @@
+// React Imports
 import React from 'react';
-import './App.css';
 import {Link} from 'react-router-dom';
 
 function Nav() {
-  let watchList = JSON.parse(localStorage.getItem("watchList"));
-  console.log(watchList);
-
-  
-
   return (
     <nav>
         <Link className="nav-link" to="/">
@@ -20,7 +15,7 @@ function Nav() {
           </Link>
           <Link className="nav-link" to="/trending">
             <li className="nav-link-text">Trending</li>
-            <li><img src="/assets/popular.svg" alt="Popular"/></li>
+            <li><img src="/assets/popular.svg" alt="Trending"/></li>
           </Link>
           <Link className="nav-link" to="/toprated">
             <li className="nav-link-text">Top Rated</li>
@@ -31,13 +26,7 @@ function Nav() {
             <li><img src="/assets/about.svg" alt="About"/></li>
           </Link>
           <Link className="nav-link" to="/watchlist">
-            <li className="nav-link-text">My Watch List
-                  {/* {watchList ?
-                    `My Watch List (${watchList.length})` 
-                    :
-                    "My Watch List (0)"
-                  } */}
-              </li>
+            <li className="nav-link-text">My Watch List</li>
             <li><img src="/assets/heart.svg" alt="Favourites"/></li>
           </Link>
         </ul>

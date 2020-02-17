@@ -1,9 +1,8 @@
+// React Imports
 import React from 'react';
-import './App.css';
 import {Link} from 'react-router-dom';
 
 class MovieRow extends React.Component {
-    
     render(){
         return(
             <Link to={`/movies/${this.props.movie.id}`} className="linkEffects">
@@ -11,7 +10,7 @@ class MovieRow extends React.Component {
                     <div className="popular-movie-title">
                         <h2>
                             <Link to={`/movies/${this.props.movie.id}`} className="linkEffects">
-                            {this.props.movie.title}
+                                {this.props.movie.title}
                             </Link>
                         </h2>
                     </div>
@@ -39,7 +38,6 @@ class MovieRow extends React.Component {
                                             <span>{this.props.movie.title}</span>
                                             <p>Rating: {this.props.movie.vote_average}/10</p>
                                             <p>{(this.props.movie.overview).substr(0, 150)}...</p>
-                                            
                                         </p>
                                     </Link>
                                 </div>
@@ -49,7 +47,6 @@ class MovieRow extends React.Component {
                     <span className="movie-gap"></span>
                </div>
             </Link> 
-         
         )
     }
 }
