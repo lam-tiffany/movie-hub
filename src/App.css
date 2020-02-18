@@ -8,17 +8,29 @@
 /* Header */
 nav {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  min-height: 10vh;
   background: linear-gradient(180deg, rgba(251,234,230,1) 0%, rgba(251,213,206,1) 100%);
   width: 100%;
   top: 0;
+  min-height: 30vh;
   z-index: 1;
 }
 
+nav h3 {
+  font-size: 4em;  
+  margin-top: 8vh;
+  margin-bottom: 0;
+}
+
+nav ul {
+  display: flex;
+  margin-bottom: 5vh;
+}
+
 .nav-links {
-  width: 40vw;
+  width: 70vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -143,7 +155,7 @@ nav svg {
 }
 
 .search-movies {
-  padding-top: 8vh;
+  padding-top: -10vh;
 }
 
 
@@ -174,6 +186,14 @@ nav svg {
 
 /* Tablet layout media query */
 @media only screen and (min-width: 650px) {
+  nav {
+    min-height: 40vh;
+  }
+  
+  nav h3 {
+    font-size: 5em;
+  }
+  
   .popular-movies {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -412,9 +432,9 @@ nav svg {
 }
 
 .search-bar {
-  position: fixed;
   right: -18px;
-  top: 11vh;
+  margin-top: 40px;
+  margin-bottom: 0;
   padding: 15px;
   background-color: #fff;
   border-radius: 20px;
@@ -540,6 +560,8 @@ nav svg {
 }
 
 @media only screen and (min-width: 600px) {
+
+  
   .page-watch-list {
     max-width: 580px;
   }
