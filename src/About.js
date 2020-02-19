@@ -5,16 +5,20 @@ import {Link} from 'react-router-dom';
 // Library Imports
 import {Animated} from "react-animated-css";
 
+// Image Imports
+import MovieNightImage from './images/movienight.svg';
+import TmdbImage from './images/moviedb-logo.svg';
+
 function About() {
   return (
     <div>
     <div className="page-about wrapper">
            <div className="poster-box">
               <div className="poster-small">
-               <img src="/assets/movienight.svg" width="320" alt="movie night"/>
+               <img src={MovieNightImage} width="320" alt="movie night"/>
               </div>
               <div className="poster-large">
-                <img src="/assets/movienight.svg" width="600" alt="movie night"/>
+                <img src={MovieNightImage} width="600" alt="movie night"/>
               </div>
            </div>
            <div className="details-box">
@@ -43,7 +47,7 @@ function About() {
     </div>
     <div className="sub-footer">
       <p><strong>disclaimer.</strong> This product uses the TMDb API but is not endorsed or certified by TMDb.</p>
-      <img src="/assets/moviedb-logo.svg" alt="Movie DB Logo" width="150"/>
+      <img src={TmdbImage} alt="Movie DB Logo" width="150"/>
     </div>
     </div>
   );

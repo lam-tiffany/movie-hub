@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 // Library Imports
 import {Animated} from "react-animated-css";
 
+// Image Imports
+import placeholderImage from './images/placeholder.png';
+
 // API Key:
 // 2456b8aa966181b0d179e6737990be82
 
@@ -63,7 +66,7 @@ function Trending() {
                                     {
                                         movie.poster_path == null ? 
                                             <div className="unavailable-poster">
-                                                <img className="placeholder-poster" src="/assets/placeholder.png" alt="Placeholder poster" width="300"/>
+                                                <img className="placeholder-poster" src={placeholderImage} alt="Placeholder poster" width="300"/>
                                             </div>
                                         :
                                             <div className="available-poster">

@@ -19,7 +19,7 @@ nav {
 }
 
 nav h3 {
-  font-size: 4em;  
+  font-size: 3em;  
   margin-top: 8vh;
   margin-bottom: 0;
 }
@@ -146,8 +146,13 @@ nav svg {
 
 /* Layout */
 
-.wrapper {
-  padding: 0 40px;
+.wrapper, 
+.watch-list-error {
+  padding: 0 20px;
+}
+
+.page-watch-list {
+  padding: 0;
 }
 
 .search-bar {
@@ -178,10 +183,16 @@ nav svg {
   text-align: center;
 }
 
-.loading, .page-404, .page-watch-list .error{
+.loading{
   display: inline-block;
   text-align: center;
   margin-top: 150px;
+}
+
+.page-404, .page-watch-list .error{
+  display: inline-block;
+  text-align: center;
+  margin-top: 10vh;
 }
 
 /* Tablet layout media query */
@@ -192,6 +203,11 @@ nav svg {
   
   nav h3 {
     font-size: 5em;
+  }
+
+  .search-bar {
+    transform: scale(0.5);
+    font-size: .8em;
   }
   
   .popular-movies {
@@ -213,6 +229,11 @@ nav svg {
     margin: auto;
   }
 
+  .page-404, .page-watch-list .error{
+    display: inline-block;
+    text-align: center;
+    margin-top: 150px;
+  }
   
 }
 
@@ -420,7 +441,7 @@ nav svg {
   font-size: 1.5em;
   font-family: 'Chivo', sans-serif;
   display: block;
-  width: 100vw;
+  min-width: 100vw;
   position: relative;
   right: -25px;
   outline: 0;
@@ -435,12 +456,13 @@ nav svg {
   right: -18px;
   margin-top: 40px;
   margin-bottom: 0;
-  padding: 15px;
+  padding: 12px;
+  /* min-width: 100vw; */
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 10px 40px #fbeae6, 0 0 0 10px #fbd5ce;
-  transform: scale(0.5);
-  font-size: 1.3em;
+  transform: scale(0.8);
+  font-size: .8em;
   z-index: 1 !important;
 }
 
@@ -531,10 +553,11 @@ nav svg {
 }
 
 .laterTitle {
-  width: 100px;
+  width: 15vw;
   text-align: left;
   font-size: 1em;
   padding: 15px;
+  margin: 0;
 }
 
 .list-btn {

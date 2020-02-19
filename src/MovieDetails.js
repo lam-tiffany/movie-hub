@@ -1,6 +1,11 @@
+// React Imports
 import React, {useState, useEffect} from 'react';
-import './App.css';
+
+// Library Imports
 import {Animated} from "react-animated-css";
+
+// Image Imports
+import placeholderImage from './images/placeholder.png';
 
 // API Key:
 // 2456b8aa966181b0d179e6737990be82
@@ -71,7 +76,7 @@ function MovieDetails(props) {
         return actors.slice(0,6).map((actor, i) => {
             return (
                 (actor.profile_path == null ? 
-                    <img className="placeholder-poster" src="/assets/placeholder.png" alt="No image available" width="92"/>
+                    <img className="placeholder-poster" src={placeholderImage} alt="No image available" width="92"/>
                     :
                     <img key={i} src={`https://image.tmdb.org/t/p/w154/${actor.profile_path}`} alt={actor.name} width="92"/>
                 )   
@@ -112,8 +117,8 @@ function MovieDetails(props) {
                         {
                             movie.poster_path == null ? 
                                 <div className="unavailable-poster">
-                                    <img className="placeholder-poster poster-small" src="/assets/placeholder.png" alt="Placeholder poster" width="250"/>
-                                    <img className="placeholder-poster poster-large" src="/assets/placeholder.png" alt="Placeholder poster"/>
+                                    <img className="placeholder-poster poster-small" src={placeholderImage} alt="Placeholder poster" width="250"/>
+                                    <img className="placeholder-poster poster-large" src={placeholderImage} alt="Placeholder poster"/>
                                 </div>
                             :
                                 <div className="available-poster">

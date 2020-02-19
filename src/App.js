@@ -19,7 +19,7 @@ import NotFound from './NotFound';
 
 function App() {
   return (
-    <Router>
+    <Router basename={'/moviehub'}>
       <div className="App">
         <Nav />
             <Switch>
@@ -29,7 +29,7 @@ function App() {
               <Route path="/about" component={About}/>
               <Route path="/watchlist" component={WatchList}/>
               <Route path="/movies/:id" component={MovieDetails}/>
-              <Route path="*" component={NotFound}/>
+              <Route path="/*" component={NotFound}/>
             </Switch>
         <Footer />
       </div>

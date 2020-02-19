@@ -20,7 +20,7 @@ function WatchList() {
     <div className="page-watch-list wrapper">
 
             {(watchList === null || watchList.length === 0 || watchList === '[]' || watchList === '' )  ?
-                <div>
+                <div className="watch-list-error">
                    <Animated animationIn="fadeInUp" animationOut="fadeOutDown" animationInDuration={1500} animationOutDuration={2500} isVisible={true}>
                     <h1 className="error">Oops! </h1>
                     </Animated>

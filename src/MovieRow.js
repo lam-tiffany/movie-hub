@@ -2,6 +2,9 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+// Image Imports
+import placeholderImage from './images/placeholder.png';
+
 class MovieRow extends React.Component {
     render(){
         return(
@@ -22,7 +25,7 @@ class MovieRow extends React.Component {
                                         {
                                             this.props.movie.poster_path == null ? 
                                                 <div className="unavailable-poster">
-                                                    <img className="placeholder-poster" src="/assets/placeholder.png" alt="placeholder" width="250"/>
+                                                    <img className="placeholder-poster" src={placeholderImage} alt="placeholder" width="250"/>
                                                 </div>
                                             :
                                                 <div className="available-poster">
